@@ -1,1 +1,1 @@
-Life is a series of commas, not periods
+My name is Betty
