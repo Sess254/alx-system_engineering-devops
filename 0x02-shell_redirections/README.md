@@ -1,1 +1,1 @@
-script that rights a gif
+acrostic poem
