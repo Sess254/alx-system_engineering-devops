@@ -1,1 +1,1 @@
-script that removes c and C from input
+Write a script that reverse its input
