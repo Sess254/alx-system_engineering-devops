@@ -1,1 +1,1 @@
-An acrostic is a poem 
+script that rights a gif
