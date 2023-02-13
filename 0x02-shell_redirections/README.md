@@ -1,1 +1,1 @@
-current state of directory
+script that duplicates last line 
