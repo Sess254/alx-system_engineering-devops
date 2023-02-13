@@ -1,1 +1,1 @@
-display first lines
+script that displays third line of a file
