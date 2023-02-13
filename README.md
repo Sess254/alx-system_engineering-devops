@@ -1,1 +1,1 @@
- Letters only please
+letter only
