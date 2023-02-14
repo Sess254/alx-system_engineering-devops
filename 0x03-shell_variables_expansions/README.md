@@ -1,1 +1,1 @@
-Create a script that creates a new global variable
+script that creates a global variable
