@@ -1,1 +1,1 @@
-Create a script that lists environment variables
+Create a script that creates a new global variable
