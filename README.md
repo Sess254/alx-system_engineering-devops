@@ -1,1 +1,1 @@
-the path to success
+beautiful path
