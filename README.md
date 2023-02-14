@@ -1,1 +1,1 @@
-divide and rule
+love is
