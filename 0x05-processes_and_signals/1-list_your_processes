@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Displays list of current process
+#All for all users even those without TTY
+#In user-oriented format
+#Show process Heirachy
+
+ps -efHww
