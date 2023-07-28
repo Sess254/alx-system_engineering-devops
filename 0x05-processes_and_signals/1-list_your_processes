@@ -4,4 +4,4 @@
 #In user-oriented format
 #Show process Heirachy
 
-ps -efHww
+ps -axuf
