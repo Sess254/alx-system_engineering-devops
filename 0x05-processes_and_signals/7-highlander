@@ -3,8 +3,8 @@
 #with sleep 2 between iterations
 #I am invincible!!! when recieving a SIGTERM signal
 
-trap 'echo "I am Invincible!!!"' 15
 while true; do
 	echo "To infinity and beyond"
 	sleep 2
+	trap 'echo "I am Invincible!!!"' SIGTERM
 done
