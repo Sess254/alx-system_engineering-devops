@@ -1,0 +1,52 @@
+Firewalls: Each server is protected by a firewall to control incoming and outgoing network traffic, ensuring security.
+
+SSL Certificate: An SSL certificate is installed on the load balancer to serve the website over HTTPS, encrypting the traffic.
+
+Monitoring Clients (Sumo Logic): Each server has monitoring clients that collect data and send it to Sumo Logic for analysis.
+
+Communication Flow:
+
+Users access the secure website by typing "https://www.foobar.com" in their browsers.
+
+DNS resolution translates "www.foobar.com" to the IP address of the load balancer.
+
+The load balancer distributes incoming HTTPS requests across the two web servers.
+
+The selected web server processes the request and communicates with the database if needed.
+
+The application server generates dynamic content, which is sent back to the user's browser over an encrypted HTTPS connection.
+
+Why Add Each Element:
+
+Firewalls: Firewalls protect servers from unauthorized access, ensuring that only legitimate traffic can enter or exit the servers.
+
+SSL Certificate (HTTPS): HTTPS encrypts traffic between the user's browser and the web server, ensuring data privacy and security during transmission.
+
+Monitoring Clients (Sumo Logic): Monitoring tools collect performance, security, and operational data from servers. Sumo Logic helps analyze this data for insights and troubleshooting.
+
+Monitoring:
+
+Monitoring is used to:
+
+Detect performance bottlenecks or issues in real-time.
+Monitor server health and resource utilization.
+Identify security threats or anomalies.
+Ensure uptime and availability.
+Monitoring Data Collection:
+
+Monitoring clients on each server collect data on server performance, logs, errors, and more. They send this data to Sumo Logic, where it's analyzed to provide insights into the system's behavior.
+
+Monitoring Web Server QPS:
+
+To monitor web server Queries Per Second (QPS):
+
+Set up monitoring tools to collect request count metrics.
+Analyze the metrics to track the QPS over time.
+Set alerts for unusual spikes or drops in QPS.
+Issues with the Infrastructure:
+
+Terminating SSL at the Load Balancer: Terminating SSL at the load balancer means that decrypted traffic is sent to the web servers. This can expose sensitive data within the infrastructure.
+
+Single MySQL Server Accepting Writes: Having only one MySQL server accepting write queries poses a single point of failure. If the server goes down, write operations are affected.
+
+Homogeneous Server Components: Having servers with identical components (database, web server, application server) can lead to uniform vulnerabilities. A single vulnerability can affect all servers, potentially causing widespread issues.
