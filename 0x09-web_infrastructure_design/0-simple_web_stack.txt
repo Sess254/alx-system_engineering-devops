@@ -1,0 +1,22 @@
+Server (8.8.8.8): This is the physical or virtual machine that hosts the entire web infrastructure. It handles incoming requests and directs them to the appropriate components.
+Domain Name (foobar.com): The domain name is used to provide a human-readable way to access the website. It acts as an alias for the server's IP address (8.8.8.8). Users can type "www.foobar.com" in their browser to reach the website.
+DNS Record: The www DNS record is a subdomain record that points to the IP address of the server (8.8.8.8). It helps route incoming requests for "www.foobar.com" to the correct server.
+Web Server (Nginx): The web server (Nginx) is responsible for handling HTTP requests from users' browsers. It receives incoming requests, processes them, and communicates with the application server to retrieve dynamic content.
+Application Server: The application server hosts the application code base. It processes dynamic content, such as generating HTML pages, executing business logic, and interacting with the database.
+Application Files (Code Base): The application files contain the code and assets that make up the website. This could be written in languages like PHP, Python, or Ruby, depending on your application's technology stack.
+Database (MySQL): The database stores and manages the website's data. It's where information like user accounts, posts, and other structured data is stored. MySQL is a popular relational database system.
+Communication Flow:
+    A user types "www.foobar.com" in their browser and hits Enter.
+    The browser sends an HTTP request to the IP address associated with "www.foobar.com."
+    The DNS record for "www.foobar.com" points to the server's IP address (8.8.8.8).
+    The server receives the request and forwards it to the web server (Nginx).
+    The web server (Nginx) processes the request and decides whether it needs to be handled by the application server.
+    If the request requires dynamic content, Nginx communicates with the application server to process the request.
+    The application server retrieves necessary data from the database and generates the dynamic content.
+    The generated content is sent back to Nginx, which then sends the response back to the user's browser.
+    The user's browser renders the received content and displays the website.
+Issues with the Infrastructure:
+     SPOF (Single Point of Failure): Since there's only one server, it becomes a single point of failure. If the server goes down, the entire website becomes inaccessible.
+    Downtime during Maintenance: When maintenance is required, such as deploying new code or updating configurations, the web server needs to be restarted. This leads to downtime during the maintenance process.
+    Scalability Challenges: With this setup, scaling to handle increased traffic becomes a challenge. The single server may not handle high traffic loads efficiently.
+
