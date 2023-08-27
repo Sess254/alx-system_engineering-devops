@@ -6,15 +6,15 @@ Monitoring Clients (Sumo Logic): Each server has monitoring clients that collect
 
 Communication Flow:
 
-Users access the secure website by typing "https://www.foobar.com" in their browsers.
+	Users access the secure website by typing "https://www.foobar.com" in their browsers.
 
-DNS resolution translates "www.foobar.com" to the IP address of the load balancer.
+	DNS resolution translates "www.foobar.com" to the IP address of the load balancer.
 
-The load balancer distributes incoming HTTPS requests across the two web servers.
+	The load balancer distributes incoming HTTPS requests across the two web servers.
 
-The selected web server processes the request and communicates with the database if needed.
+	The selected web server processes the request and communicates with the database if needed.
 
-The application server generates dynamic content, which is sent back to the user's browser over an encrypted HTTPS connection.
+	The application server generates dynamic content, which is sent back to the user's browser over an encrypted HTTPS connection.
 
 Why Add Each Element:
 
@@ -28,11 +28,11 @@ Monitoring:
 
 Monitoring is used to:
 
-Detect performance bottlenecks or issues in real-time.
-Monitor server health and resource utilization.
-Identify security threats or anomalies.
-Ensure uptime and availability.
-Monitoring Data Collection:
+	Detect performance bottlenecks or issues in real-time.
+	Monitor server health and resource utilization.
+	Identify security threats or anomalies.
+	Ensure uptime and availability.
+	Monitoring Data Collection:
 
 Monitoring clients on each server collect data on server performance, logs, errors, and more. They send this data to Sumo Logic, where it's analyzed to provide insights into the system's behavior.
 
@@ -45,8 +45,8 @@ Analyze the metrics to track the QPS over time.
 Set alerts for unusual spikes or drops in QPS.
 Issues with the Infrastructure:
 
-Terminating SSL at the Load Balancer: Terminating SSL at the load balancer means that decrypted traffic is sent to the web servers. This can expose sensitive data within the infrastructure.
+	Terminating SSL at the Load Balancer: Terminating SSL at the load balancer means that decrypted traffic is sent to the web servers. This can expose sensitive data within the infrastructure.
 
-Single MySQL Server Accepting Writes: Having only one MySQL server accepting write queries poses a single point of failure. If the server goes down, write operations are affected.
+	Single MySQL Server Accepting Writes: Having only one MySQL server accepting write queries poses a single point of failure. If the server goes down, write operations are affected.
 
-Homogeneous Server Components: Having servers with identical components (database, web server, application server) can lead to uniform vulnerabilities. A single vulnerability can affect all servers, potentially causing widespread issues.
+	Homogeneous Server Components: Having servers with identical components (database, web server, application server) can lead to uniform vulnerabilities. A single vulnerability can affect all servers, potentially causing widespread issues.
