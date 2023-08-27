@@ -1,0 +1,25 @@
+Server 1 (8.8.8.1): This server will host the web application, including the application files and code base.
+Server 2 (8.8.8.2): This server will also host the web application, serving as a backup to ensure high availability
+Server 3 (8.8.8.3): This server will be dedicated to running the database.
+Web Server (Nginx): Nginx will handle HTTP requests and distribute them to the application servers.
+Application Server: This server hosts the application code base, processing dynamic content.
+Load Balancer (HAproxy): The load balancer will distribute incoming requests across the two application servers using a Round Robin distribution algorithm.
+Application Files (Code Base): These files contain the website's code and assets.
+Database (MySQL): The database stores and manages the website's data.
+Communication Flow:
+    Users access the website by typing "www.foobar.com" in their browsers.
+    DNS resolution translates "www.foobar.com" to the IP addresses of the servers.
+    The load balancer distributes incoming requests across the two application servers using Round Robin.
+    The selected application server processes the request and communicates with the database if needed.
+    The application server generates dynamic content and sends it back to the load balancer.
+    The load balancer forwards the response to the user's browser.
+Load Balancer Setup:
+    Distribution Algorithm: The load balancer is configured with a Round Robin distribution algorithm. It evenly distributes incoming requests across the available application servers.
+    Active-Active Setup: The load balancer enables an Active-Active setup, meaning both application servers are actively serving requests simultaneously. This ensures better load distribution and high availability.
+Database Primary-Replica (Master-Slave) Cluster:
+    Primary Node (Master): This is the main database node that handles read and write operations. It's responsible for processing write queries and propagating changes to replica nodes.
+    Replica Node (Slave): The replica node replicates data from the primary node. It handles read queries and provides redundancy. However, it cannot handle write queries directly.
+Issues with the Infrastructure:
+    SPOF: While the application servers are redundant, the database server (Server 3) could still be a single point of failure. If it goes down, the entire system might be affected.
+    Security Issues: The infrastructure lacks security measures like firewalls and HTTPS, leaving it vulnerable to attacks and unauthorized access.
+    No Monitoring: The absence of monitoring tools makes it difficult to identify performance bottlenecks, security breaches, or other issues in real-time.
