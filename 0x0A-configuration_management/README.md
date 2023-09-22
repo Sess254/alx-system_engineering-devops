@@ -21,5 +21,15 @@ Requirements:
  </ul>
  </p>
 
+  <p>
+   1.Using Puppet, install flask from pip3.
+
+Requirements:
+ <ul>
+  <li>Install flask</li>
+  <li>Version must be 2.1.0</li>
+ </ul>
+ </p>
+
 </body>
 </html>
