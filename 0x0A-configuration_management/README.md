@@ -22,7 +22,7 @@ Requirements:
  </p>
 
   <p>
-   1.Using Puppet, install flask from pip3.
+ 1. Using Puppet, install flask from pip3.
 
 Requirements:
  <ul>
