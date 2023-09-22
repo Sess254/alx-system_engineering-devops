@@ -13,11 +13,11 @@ Using Puppet, create a file in /tmp.
 
 Requirements:
 
-File path is /tmp/school
-File permission is 0744
-File owner is www-data
-File group is www-data
-File contains I love Puppet
+<li>File path is /tmp/school<li>
+<li>File permission is 0744<li>
+<li>File owner is www-data<li>
+<li>File group is www-data<li>
+<li>File contains I love Puppet<li>
  </p>
 
 </body>
