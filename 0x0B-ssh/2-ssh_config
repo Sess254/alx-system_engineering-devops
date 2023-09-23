@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# configures it to our needs so that you can connect to a server without typing a password
+Host *
+	PasswordAuthentification no
+	IdentifyFile ~/.ssh/school
