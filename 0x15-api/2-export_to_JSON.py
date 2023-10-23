@@ -14,7 +14,7 @@ def export_to_json(uid):
     with open("{}.json".format(uid), 'w', encoding="utf-8") as f:
         data = {uid: []}
         for _ in userTodos:
-            rows = {"tasks": _.get("title"), "completed": _.get("completed"),
+            rows = {"task": _.get("title"), "completed": _.get("completed"),
                     "username": user.get("username")}
             data[uid].append(rows)
         f.write(json.dumps(data))
